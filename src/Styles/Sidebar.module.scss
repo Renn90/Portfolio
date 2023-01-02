@@ -1,0 +1,47 @@
+@import "./utilities";
+
+.wrapper {
+  @extend%largescreens;
+  display: flex;
+  top: 0px;
+  height: 100vh;
+  left: -10px;
+  flex-direction: column;
+  color: #3f7d20;
+  position: fixed;
+  z-index: 94;
+
+  ul {
+    li {
+      list-style: none;
+      margin: 5px 0;
+      font-size: 1.5rem;
+      transition: 1s;
+
+      a {
+        color: #3f7d20;
+        text-decoration: none;
+      }
+      &:hover {
+        scale: 1.2;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 1px;
+      display: block;
+      height: 50vh;
+      margin: 0 auto;
+      background-color: #3f7d20;
+    }
+    &::after {
+      content: "";
+      width: 1px;
+      display: block;
+      height: 50vh;
+      margin: 0 auto;
+      background-color: #3f7d20;
+    }
+  }
+}

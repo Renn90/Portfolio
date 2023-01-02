@@ -1,0 +1,57 @@
+@import "./utilities";
+
+.wrapper {
+  text-align: center;
+  margin: 60px;
+
+  h1 {
+    color: #72b01d;
+    font-family: $primary-font;
+    font-size: 2rem;
+    margin: 10px;
+  }
+  p {
+    color: white;
+    font-family: $secondary-font;
+    margin: 15px;
+  }
+  .button{
+    padding: 1em 2em;
+    margin-top: 10px;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #72b01d;
+    font-family: $primary-font;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 1s;
+
+    a{
+      color: black;
+      text-decoration: none;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    .dawnload {
+      margin: 0 5px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .wrapper {
+    text-align: left;
+    h1 {
+      font-size: 1rem;
+      margin: 10px;
+    }
+    .button{
+      margin: 10px;
+      padding: 1em;
+    }
+  }
+}

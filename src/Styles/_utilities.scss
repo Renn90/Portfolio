@@ -1,0 +1,28 @@
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Poppins", sans-serif;
+$intro-font: "Roboto Mono", monospace;
+
+%textdec {
+  color: #3f7d20;
+  font-size: 1.9rem;
+  opacity: 40%;
+  font-family: "Great Vibes", cursive;
+  position: absolute;
+}
+
+@keyframes timeout {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+%loading {
+  animation: timeout 3s;
+}
+%largescreens {
+  max-width: 1500px;
+  margin: auto;
+}

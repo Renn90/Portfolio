@@ -1,0 +1,90 @@
+@import "./utilities";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(13, 10, 11, 1),
+      90%,
+      rgba(63, 125, 32, 0.7)
+    ),
+    url("./../../public/Assets/background.webp");
+
+  .content {
+    position: relative;
+    margin-left: 40px;
+
+    &::before {
+      @extend %textdec;
+      content: "<h1></h1>";
+      left: 40px;
+      top: -65px;
+    }
+    &::after {
+      @extend %textdec;
+      content: "<h1></h1>";
+      margin: 15px 0;
+      left: 40px;
+    }
+  }
+  p {
+    font-family: $intro-font;
+    margin: 0 50px;
+    color: white;
+    font-size: 1.2rem;
+  }
+  h1 {
+    margin: 0 35px;
+    font-family: $primary-font;
+    font-size: 5rem;
+    position: relative;
+    color: #3f7d20;
+  }
+  .headline {
+    color: white;
+    font-family: $secondary-font;
+  }
+  .tagLarge {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    color: #3f7d20;
+    opacity: 15% !important;
+    top: 40px;
+    left: 140px;
+
+    i {
+      margin: 140px;
+      font-size: 30px;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .wrapper {
+    h1 {
+      font-size: 3rem;
+      margin: 0 40px;
+    }
+  }
+}
+@media (max-width: 265px) {
+  .wrapper {
+    height: 400px;
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 45px;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

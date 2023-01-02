@@ -1,0 +1,142 @@
+@import "./utilities";
+
+.wrapper {
+  color: white;
+  margin: 50px 80px;
+
+  .heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    h1 {
+      color: #72b01d;
+      font-family: $secondary-font;
+      font-weight: 600;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      font-size: 2.7rem;
+      z-index: 5;
+    }
+    span {
+      width: 50px;
+      height: 4px;
+      background: #72b01d;
+      margin-bottom: -8px;
+      margin-left: 8px;
+    }
+    .bgDec {
+      font-size: 70px;
+      position: absolute;
+      color: black;
+      z-index: 1;
+      opacity: 3%;
+      text-shadow: -1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff,
+        1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 1px 0 #fff,
+        -1px 0 0 #fff;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+
+    .text {
+      width: 70%;
+
+      p {
+        font-family: $primary-font;
+        font-size: 17px;
+        line-height: 1.5;
+        word-spacing: 1.5;
+      }
+      ul {
+        columns: 2;
+        margin: 10px 0;
+        font-family: $primary-font;
+        list-style: none;
+
+        li {
+          span {
+            margin-right: 8px;
+            color: #72b01d;
+          }
+        }
+      }
+    }
+ 
+    div{
+      position: relative;
+      
+      &:hover .hove{
+      opacity: 0;
+      }
+
+      img {
+        width: 280px;
+        transition: 1s;
+        margin-bottom: 20px;
+        margin: 50px;
+        position: relative;
+      }
+
+      .hove{
+        position: absolute;
+        transition: 1s;
+        top: 0;
+        height: 280px;
+        width: 280px;
+        margin: 50px;
+        background-color: #73b01d60;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    margin: 10px;
+
+    .heading {
+      justify-content: center;
+      text-align: center;
+
+      h1 {
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 10px 0;
+      }
+      span {
+        margin-left: 2px;
+      }
+    }
+
+    .content {
+      flex-direction: column;
+      justify-content: center;
+
+      .text {
+        width: 100%;
+        ul {
+          columns: 1;
+          li {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .wrapper {
+    .heading {
+      margin-left: 10px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

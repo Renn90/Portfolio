@@ -1,0 +1,139 @@
+@import "../Styles/utilities";
+
+.container {
+  display: flex;
+  background-color: #0d0a0b;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2372b01d' fill-opacity='0.02'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 50px;
+  color: white;
+  padding: 80px;
+  position: relative;
+
+  .heading {
+    font-family: $secondary-font;
+    text-align: center;
+    margin: 20px;
+  }
+  .maped {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 60%;
+
+    &:hover .overlay {
+      opacity: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      opacity: 80%;
+      margin: 0;
+      border-radius: 5px 5px 0 0;
+    }
+    .overlay {
+      width: 100%;
+      position: absolute;
+      background-color: #73b01d60;
+      height: 100%;
+      transition: 1s;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+  .info {
+    font-family: $primary-font;
+    text-align: left;
+    width: 61%;
+    background-color: #121413;
+    top: 60%;
+
+    .infoCont {
+      padding: 25px;
+    }
+    h6 {
+      font-family: $intro-font;
+      font-size: 0.7rem;
+      color: #72b01d;
+      text-align: left;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin: 5px 0;
+    }
+    .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 13px 0;
+
+      p {
+        font-family: $intro-font;
+        font-size: 0.7em;
+        color: #72b01d;
+        margin-right: 8px;
+      }
+    }
+    .description {
+      font-size: 0.9em;
+      color: #dce1de;
+    }
+    .links {
+      a{
+        text-decoration: none;
+        color: white;
+        margin-right: 11px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    padding: 30px;
+
+    .heading {
+      font-size: 1.5rem;
+    }
+    .maped {
+      .img {
+        width: 90%;
+      }
+      .info {
+        width: 90%;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 20px;
+
+    .heading {
+      font-size: 1rem;
+      margin: 4px;
+    }
+    .maped {
+      .img {
+        width: 100%;
+      }
+      .info {
+        width: 100%;
+      }
+    }
+  }
+}
